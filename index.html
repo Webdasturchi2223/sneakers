@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="hero-container container">
+        <!-- Header -->
+        <header class="site-header header">
+
+            <a class="header__logo-link" href="index.html">
+                <img class="header__logo" src="img/logo.svg" alt="Sneakers logo" width="137" height="20">
+            </a>
+
+            <nav class="header__sitenav sitenav">
+                <ul class="sitenav__items">
+                    <li class="sitenav__item"><a class="sitenav__link sitenav__link-hidden" href="#">Collections</a></li>
+                    <li class="sitenav__item"><a class="sitenav__link" href="#">Men</a></li>
+                    <li class="sitenav__item"><a class="sitenav__link" href="#">Women</a></li>
+                    <li class="sitenav__item"><a class="sitenav__link" href="#">About</a></li>
+                    <li class="sitenav__item"><a class="sitenav__link" href="#">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-cart-wrapper">
+                <a class="header__cart-link cart" href="#">
+                    <span class="cart__counter">1</span>
+                    <svg class="cart__icon" width="22" height="20" viewBox="0 0 22 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 14">
+                            <path id="Shape" fill-rule="evenodd" clip-rule="evenodd" d="M3.86313 3.64139H20.9246C21.5077 3.64139 21.9352 4.19014 21.7941 4.75489L19.9732 12.0381C19.8781 12.4181 19.5473 12.6924 19.1563 12.7153L4.83452 13.557C5.09057 14.1554 5.68378 14.5661 6.36452 14.5661H16.3727C17.8709 14.5661 19.0897 15.7849 19.0897 17.2831C19.0897 18.7812 17.8709 20 16.3727 20C14.4955 20 13.1758 18.1275 13.818 16.3584H8.91319C9.55625 18.1298 8.23365 20 6.35846 20C4.09916 20 2.83011 17.3851 4.21903 15.6114C3.44867 15.0012 3.00149 14.1031 2.92835 13.2755C1.79349 0.631508 1.84298 1.18296 1.9492 2.36648L1.94921 2.36663L1.94928 2.36744C2.02069 3.1631 2.11759 4.24273 1.89764 1.79232H0.896159C0.401223 1.79232 0 1.39109 0 0.896159C0 0.401223 0.401223 0 0.896159 0H2.71694C3.18081 0 3.56803 0.354025 3.60951 0.816059L3.86313 3.64139ZM5.43388 17.2831C5.43388 17.7929 5.84867 18.2077 6.35846 18.2077C6.86829 18.2077 7.28308 17.7929 7.28308 17.2831C7.28308 16.7732 6.86829 16.3584 6.35846 16.3584C5.84867 16.3584 5.43388 16.7732 5.43388 17.2831ZM16.3727 18.2077C15.8629 18.2077 15.4481 17.7929 15.4481 17.2831C15.4481 16.7732 15.8629 16.3584 16.3727 16.3584C16.8825 16.3584 17.2973 16.7732 17.2973 17.2831C17.2973 17.7929 16.8825 18.2077 16.3727 18.2077ZM4.59328 11.7758L18.394 10.9648L19.7769 5.43367H4.02401L4.59328 11.7758Z" fill="currentColor" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- CART-MODAL -->
+            <div class="header__cart-modal">
+                <section class="shopping-cart shopping-cart--modal">
+                    <header class="shopping-cart__header">
+                        <h2 class="shopping-cart__title">Cart</h2>
+                    </header>
+                    <div class="shopping-cart__inner">
+                        <!-- Empty -->
+                        <div class="shopping-cart__empty">Your cart is empty.</div>
+                        <!-- Has item -->
+                        <ul class="shopping-cart__list">
+                            <li class="shopping-cart__product">
+                                <img class="shopping-cart__img" src="img/main.jpg" alt="Boots" width="50" height="50">
+                                <div class="shopping-cart__content">
+                                    <div class="shopping-cart__name">Fall Limited Edition Sneakers</div>
+                                    <span class="shopping-cart__cost">$125.00 x 1
+                                        <b class="cost">$125.00</b>
+                                    </span>
+                                </div>
+
+                                <button class="shopping-cart__bin">
+
+                                    <svg class="shopping-cart__icon" width="14" height="16" viewBox="0 0 14 16"
+
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="Mask 2">
+                                            <path id="Mask" fill-rule="evenodd" clip-rule="evenodd" d="M0 2.625V1.75C0 1.33438 0.334375 1 0.75 1H4.25L4.54375 0.415625C4.66875 0.159375 4.92812 0 5.2125 0H8.78438C9.06875 0 9.32812 0.159375 9.45625 0.415625L9.75 1H13.25C13.6656 1 14 1.33438 14 1.75V2.625C14 2.83125 13.8313 3 13.625 3H0.375C0.16875 3 0 2.83125 0 2.625ZM13 4.375V14.5C13 15.3281 12.3281 16 11.5 16H2.5C1.67188 16 1 15.3281 1 14.5V4.375C1 4.16875 1.16875 4 1.375 4H12.625C12.8313 4 13 4.16875 13 4.375ZM4 6C4.275 6 4.5 6.225 4.5 6.5V13.5C4.5 13.775 4.275 14 4 14C3.725 14 3.5 13.775 3.5 13.5V6.5C3.5 6.225 3.725 6 4 6ZM7.5 6.5C7.5 6.225 7.275 6 7 6C6.725 6 6.5 6.225 6.5 6.5V13.5C6.5 13.775 6.725 14 7 14C7.275 14 7.5 13.775 7.5 13.5V6.5ZM10 6C10.275 6 10.5 6.225 10.5 6.5V13.5C10.5 13.775 10.275 14 10 14C9.725 14 9.5 13.775 9.5 13.5V6.5C9.5 6.225 9.725 6 10 6Z" fill="currentColor" />
+
+                                            <mask id="mask0_0_632" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                                x="0" y="0" width="14" height="16">
+                                                <path id="Mask_2" fill-rule="evenodd" clip-rule="evenodd" d="M0 2.625V1.75C0 1.33438 0.334375 1 0.75 1H4.25L4.54375 0.415625C4.66875 0.159375 4.92812 0 5.2125 0H8.78438C9.06875 0 9.32812 0.159375 9.45625 0.415625L9.75 1H13.25C13.6656 1 14 1.33438 14 1.75V2.625C14 2.83125 13.8313 3 13.625 3H0.375C0.16875 3 0 2.83125 0 2.625ZM13 4.375V14.5C13 15.3281 12.3281 16 11.5 16H2.5C1.67188 16 1 15.3281 1 14.5V4.375C1 4.16875 1.16875 4 1.375 4H12.625C12.8313 4 13 4.16875 13 4.375ZM4 6C4.275 6 4.5 6.225 4.5 6.5V13.5C4.5 13.775 4.275 14 4 14C3.725 14 3.5 13.775 3.5 13.5V6.5C3.5 6.225 3.725 6 4 6ZM7.5 6.5C7.5 6.225 7.275 6 7 6C6.725 6 6.5 6.225 6.5 6.5V13.5C6.5 13.775 6.725 14 7 14C7.275 14 7.5 13.775 7.5 13.5V6.5ZM10 6C10.275 6 10.5 6.225 10.5 6.5V13.5C10.5 13.775 10.275 14 10 14C9.725 14 9.5 13.775 9.5 13.5V6.5C9.5 6.225 9.725 6 10 6Z" fill="white" />
+                                            </mask>
+
+                                            <g mask="url(#mask0_0_632)">
+                                            </g>
+                                        </g>
+
+                                    </svg>
+
+                                </button>
+
+                            </li>
+
+                            <a class="btn" href="#">Checkout</a>
+
+                        </ul>
+
+
+                    </div>
+                </section>
+            </div>
+
+            <div class="profile__wrapper">
+                <a class="header__profile profile" href="#">
+                    <img class="profile__img" src="img/profile.svg" alt="cart" width="50" height="50">
+                </a>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <div class="hero">
+            <!-- HERO-IMG-WRAPPER -->
+            <div class="hero__img-wrapper">
+                <div class="hero__main-img-wrapper">
+                    <button class="hero__img-controller hero__img-controller--prev js-controller-prev" type="button">
+                        <span class="hero__controll-inner">
+                            <svg class="hero__controll-icon" width="13" height="20" viewBox="0 0 13 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 2L3 10L11 18" stroke="currentColor" stroke-width="3" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button class="hero__img-controller hero__img-controller--next js-controller-next" type="button">
+                        <span class="hero__controll-inner">
+                            <svg class="hero__controll-icon" width="13" height="20" viewBox="0 0 13 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 2L10 10L2 18" stroke="currentColor" stroke-width="3" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <img class="hero__main-img" id="mainImg" src="img/main.jpg" alt="Shoes" width="445" height="445">
+                </div>
+
+                <!-- Hero__img-list -->
+                <ul class="hero__img-list">
+                    <li class="hero__images js-img hero__images--active ">
+                        <img class="hero__image" src="img/main.jpg" alt="shoes" width="88" height="88">
+                    </li>
+                    <li class="hero__images js-img">
+                        <img class="hero__image" src="img/behind.jpg" alt="shoes" width="88" height="88">
+                    </li>
+                    <li class="hero__images js-img">
+                        <img class="hero__image" src="img/up.jpg" alt="shoes" width="88" height="88">
+                    </li>
+                    <li class="hero__images js-img">
+                        <img class="hero__image" src="img/down.jpg" alt="shoes" width="88" height="88">
+                    </li>
+                </ul>
+            </div>
+
+            <!-- HERO-CONTENT -->
+            <div class="hero__content">
+                <p class="hero__company">Sneaker Company</p>
+                <h2 class="hero__heading">Fall Limited Edition Sneakers</h2>
+                <p class="hero__text">These low-profile sneakers are your perfect casual wear companion. Featuring a
+                    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <div class="hero__price-wrapper">
+                    <span class="hero__price">$<span>125</span>.00</span>
+                    <span class="hero__sale">50%</span>
+                </div>
+                <p class="hero__sale-price">$<span>250</span>.00</p>
+                <!-- PRODUCT-LIST -->
+                <div class="hero__content-bottom">
+                    <div class="hero__quantity-wrapper">
+                        <button class="hero__quantity-controller js-minus">
+                            <svg width="12" height="4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" fill="#FF7E1B" />
+                            </svg>
+                        </button>
+                        <span class="hero__quantity">1</span>
+                        <button class="hero__quantity-controller js-plus">
+                            <svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                                    fill="#FF7E1B" />
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="btn btn--wide" type="button">
+                        <img class="mini-cart-icon" src="img/mini-cart.svg" alt="mini cart" width="17" height="16">
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
