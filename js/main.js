@@ -64,7 +64,9 @@ jsPLUS.addEventListener('click', function () {
         price.innerText = Number(price.innerText) + 125
         salePrice.innerText = Number(salePrice.innerText) + 250
     } else {
-        heroQUANTITY.innerText = 0
+        heroQUANTITY.innerText = 1
+        price.innerText = 125
+        salePrice.innerText = 250
     }
 
 })
